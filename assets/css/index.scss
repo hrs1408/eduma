@@ -1,23 +1,9 @@
 #Header {
-  .app-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .contact {
-      i {
-        margin-top: 4px;
-        color: green;
-      }
-    }
-  }
-
   .nav-bar {
     a {
       color: white;
       font-size: 15px;
       font-weight: 500;
-
       &::after {
         margin-top: 2px;
         content: "";
@@ -54,7 +40,9 @@
         height: 100vh;
 
         img {
+          width: 100%;
           height: 100vh;
+          object-fit: cover;
         }
 
         .slider-content {
@@ -180,6 +168,7 @@
         transition: all 0.3s;
 
         img {
+          width: 100%;
           object-fit: cover;
           border-radius: 4px;
         }
@@ -322,7 +311,7 @@
       }
       .slick-dots {
         position: absolute;
-        bottom: -20%;
+        bottom: -30%;
         li {
           height: 50px;
           width: 50px;
@@ -452,50 +441,32 @@
 
   .sletter {
     .input-group {
-        input{
-            background: #fff;
-            color: #b4b4b4;
-            border-radius: 5px;
-            border: 1px solid #fff;
-            line-height: 30px;
-            padding: 5px 10px;
-            margin-left: 0;
-            border-radius: 0;
-            box-shadow: none;
-            border-radius: 4px;
-            width: 475px;
-        }
-        .btn-sub{
-            height: 100%;
-            padding: 0 20px;
-            border-radius: 4px;
-            background-color: #fdb03f;
-            color: white;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
+      input {
+        background: #fff;
+        color: #b4b4b4;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        line-height: 30px;
+        padding: 5px 10px;
+        margin-left: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border-radius: 4px;
+        width: 475px;
+      }
+      .btn-sub {
+        padding: 13px 20px;
+        border-radius: 4px;
+        background-color: #fdb03f;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
     }
   }
 }
 
-#Footer{
-    .footer-wrapper{
-        .footer-top{
-            .left{
-                img{
-                    width: 200px;
-                    height: 47px;
-                }
-            }
-        }
-    }
-}
-
 .content-popup {
-  position: fixed;
-  right: 0;
-  top: 60%;
-
   .style-toggle {
     position: relative;
     display: block;
@@ -559,22 +530,64 @@
   }
 }
 
-.on-top-button{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fdb03f;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-    transition: all 0.3s;
-    &:hover{
-        background-color: #ff9f00;
-    }
+.on-top-button {
+  line-height: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #ff9f00;
+  }
 }
 
+@media screen and (max-width: 1200px) {
+  #Content{
+    .slider-group{
+      .slider-home{
+        .slider-item{
+          height: 600px;
+          img{
+            height: 600px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #Header {
+    padding: 0 20px;
+  }
+  #Content {
+    .popular-courses, .banner, .top-category, .university, .customer-ratting {
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    .featured-event{
+      .slider-feature{
+        padding: 0 20px;
+        .slick-dots{
+          bottom: -22%;
+        }
+      }
+    }
+
+    .sletter{
+      .input-group{
+        margin-top: 20px;
+        padding: 0 20px;
+        input{
+          width: 100%;
+        }
+        .btn-sub{
+          padding: 13px 20px;
+        }
+      }
+    }
+  }
+  #Footer{
+    .footer-top, .footer-bottom {
+      padding: 0 20px;
+    }
+  }
+}

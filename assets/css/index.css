@@ -1,12 +1,3 @@
-#Header .app-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#Header .app-bar .contact i {
-  margin-top: 4px;
-  color: green;
-}
 #Header .nav-bar a {
   color: white;
   font-size: 15px;
@@ -37,7 +28,10 @@
   height: 100vh;
 }
 #Content .slider-group .slider-home .slider-item img {
+  width: 100%;
   height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #Content .slider-group .slider-home .slider-item .slider-content {
   -moz-text-align-last: center;
@@ -144,6 +138,7 @@
   transition: all 0.3s;
 }
 #Content .popular-courses .courses .courses-item img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 4px;
@@ -253,7 +248,7 @@
 }
 #Content .featured-event .slider-feature .slick-dots {
   position: absolute;
-  bottom: -20%;
+  bottom: -30%;
 }
 #Content .featured-event .slider-feature .slick-dots li {
   height: 50px;
@@ -353,8 +348,7 @@
   width: 475px;
 }
 #Content .sletter .input-group .btn-sub {
-  height: 100%;
-  padding: 0 20px;
+  padding: 13px 20px;
   border-radius: 4px;
   background-color: #fdb03f;
   color: white;
@@ -362,16 +356,6 @@
   font-weight: 500;
 }
 
-#Footer .footer-wrapper .footer-top .left img {
-  width: 200px;
-  height: 47px;
-}
-
-.content-popup {
-  position: fixed;
-  right: 0;
-  top: 60%;
-}
 .content-popup .style-toggle {
   position: relative;
   display: block;
@@ -417,20 +401,47 @@
 }
 
 .on-top-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #fdb03f;
-  color: white;
-  text-align: center;
   line-height: 50px;
   cursor: pointer;
   transition: all 0.3s;
 }
 .on-top-button:hover {
   background-color: #ff9f00;
+}
+
+@media screen and (max-width: 1200px) {
+  #Content .slider-group .slider-home .slider-item {
+    height: 600px;
+  }
+  #Content .slider-group .slider-home .slider-item img {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #Header {
+    padding: 0 20px;
+  }
+  #Content .popular-courses, #Content .banner, #Content .top-category, #Content .university, #Content .customer-ratting {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  #Content .featured-event .slider-feature {
+    padding: 0 20px;
+  }
+  #Content .featured-event .slider-feature .slick-dots {
+    bottom: -22%;
+  }
+  #Content .sletter .input-group {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  #Content .sletter .input-group input {
+    width: 100%;
+  }
+  #Content .sletter .input-group .btn-sub {
+    padding: 13px 20px;
+  }
+  #Footer .footer-top, #Footer .footer-bottom {
+    padding: 0 20px;
+  }
 }/*# sourceMappingURL=index.css.map */

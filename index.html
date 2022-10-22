@@ -32,19 +32,21 @@
         <div id="Header">
             <div class="absolute z-20 w-full">
                 <div class="container mx-auto">
-                    <div class="app-bar py-2">
+                    <div class="app-bar flex items-center justify-between py-2">
                         <div class="contact flex gap-6">
                             <div class="phone flex items-center gap-2">
-                                <i class="far fa-phone-alt"></i>
+                                <i class="far fa-phone-alt mt-1 text-[#5EBB3E]"></i>
                                 <a href="tel: (+88) 1990 6886"
-                                    class="text-white font-medium"> (+88) 1990
+                                    class="text-white font-medium font-[15px]
+                                    hidden md:block">
+                                    (+88) 1990
                                     6886</a>
                             </div>
                             <div class="email flex items-center gap-2">
-                                <i class="far fa-envelope"></i>
+                                <i class="far fa-envelope mt-1 text-[#5EBB3E]"></i>
                                 <a href="mailto: agency@thimpress.com"
                                     class="text-white
-                                    font-medium">agency@thimpress.com</a>
+                                    font-medium hidden md:block">agency@thimpress.com</a>
                             </div>
                         </div>
                         <div class="account flex items-center gap-2">
@@ -61,8 +63,11 @@
                 <div class="line">
 
                 </div>
-                <div class="container mx-auto py-2 flex items-center
+                <div class="container mx-auto py-2 md:flex items-center
                     justify-between">
+                    <div class="burger-btn">
+
+                    </div>
                     <div class="logo">
                         <h1>
                             <a href="#">
@@ -73,7 +78,7 @@
                     </div>
                     <div class="nav-bar flex items-center gap-6">
                         <ul class="nav navbar-nav flex items-center gap-6">
-                            <li>
+                            <li class="drop-down">
                                 <a href="#"><span>Demos</span> <i class="fas
                                         fa-chevron-down"></i></a>
                             </li>
@@ -110,7 +115,7 @@
             </div>
         </div>
         <div id="Content">
-            <div class="slider-group">
+            <div class="slider-group relative">
                 <div class="slider-home">
                     <div class="slider-item">
                         <img src="./assets/images/bgr.jpg" alt="">
@@ -145,8 +150,8 @@
                 <div class="fixed-content absolute bottom-0 z-20 w-full">
                     <div class="container mx-auto">
                         <div class="line h-[2px]"></div>
-                        <div class="edu-content flex items-center
-                            justify-around py-8">
+                        <div class="edu-content py-8 flex items-center
+                            justify-around">
                             <div class="content-item flex items-center gap-6">
                                 <i class="far fa-diploma text-[50px]
                                     text-white"></i>
@@ -187,14 +192,14 @@
                     </div>
                 </div>
             </div>
-            <div class="popular-courses container mx-auto py-10">
-                <div class="flex items-center justify-between">
+            <div class="popular-courses container mx-auto py-20 mt-10 md:mt-0">
+                <div class="block md:flex items-center justify-between">
                     <div class="title">
-                        <p class="font-medium text-2xl">Popular Courses</p>
+                        <p class="font-medium text-3xl">Popular Courses</p>
                         <p class="mt-2 text-sm text-slate-400">All Eduma, All
                             the time</p>
                     </div>
-                    <div class="nav">
+                    <div class="nav mt-4 md:mt-0">
                         <ul class="flex items-center gap-6">
                             <li class="active">
                                 <button>
@@ -219,7 +224,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="courses mt-4 grid grid-cols-4 gap-6">
+                <div class="courses mt-4 grid lg:grid-cols-4 sm:grid-cols-2
+                    gap-6">
                     <div class="courses-item">
                         <img src="./assets/images/courses-18-400x300.jpg"
                             alt="">
@@ -342,7 +348,8 @@
                     </div>
                 </div>
             </div>
-            <div class="container mx-auto banner grid grid-cols-2 gap-6 pt-10">
+            <div class="container mx-auto banner grid gap-6 pt-10 md:grid-cols-2
+                mt-14">
                 <div class="banner-item relative">
                     <img src="./assets/images/Rectangle-48.jpg" alt="">
                     <div class="banner-content absolute top-1/2 left-10
@@ -372,13 +379,14 @@
                     </div>
                 </div>
             </div>
-            <div class="top-category bg-gray-200 mt-10 py-14">
-                <div class="container mx-auto flex items-center
+            <div class="top-category bg-gray-200 mt-20 py-14">
+                <div class="container py-4 mx-auto block md:flex items-center
                     justify-between">
-                    <div class="title text-2xl font-medium">
+                    <div class="title text-2xl font-medium pb-4 md:py-0">
                         Top Categories
                     </div>
-                    <ul class="categories grid grid-cols-4 gap-8">
+                    <ul class="categories grid grid-cols-1 md:grid-cols-2
+                        lg:grid-cols-4 gap-8">
                         <li>
                             <Button class="flex items-center gap-4 ">
                                 <img src="./assets/images/004-setting.png"
@@ -411,13 +419,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="featured-event container mx-auto pt-10 pb-20">
+            <div class="featured-event container mx-auto pt-10 pb-28">
                 <div class="title">
                     <p class="text-center text-3xl font-medium">Featured Events</p>
                     <p class="text-center text-md mt-3 text-gray-400">Upcoming
                         Education Events to feed your brain.</p>
                 </div>
-                <div class="slider-feature mt-4">
+                <div class="slider-feature mt-14">
                     <div class="feature-item">
                         <img src="./assets/images/courses-5-600x346.jpg" alt="">
                         <div class="feature-content p-4">
@@ -548,7 +556,7 @@
                     </div>
                 </div>
             </div>
-            <div class="university py-10">
+            <div class="university py-20">
                 <div class="uni-slider">
                     <div class="uni-item">
                         <a href="">
@@ -595,7 +603,7 @@
             <div class="customer-ratting mt-10">
                 <div class="container mx-auto py-10">
                     <div class="title">
-                        <p class="text-center text-white text-4xl
+                        <p class="text-center text-white text-3xl
                             font-medium
                             pt-10">Our Tesimonials</p>
                     </div>
@@ -776,7 +784,9 @@
                 </div>
             </div>
             <div class="sletter bg-[#63D1BD] py-14">
-                <div class="text-center container mx-auto flex justify-between">
+                <div class="text-center container mx-auto block md:flex
+                    justify-center
+                    gap-10">
                     <p class="font-semibold text-white text-3xl">Subscribe our
                         Newsletter</p>
                     <div class="input-group flex items-center gap-2">
@@ -790,18 +800,20 @@
         </div>
         <div id="Footer">
             <div class="footer-wrapper pt-20 w-full bg-white">
-                <div class="footer-top flex justify-between container mx-auto">
-                    <div class="left w-[20%]">
-                        <img src="./assets/images/edu_black.webp" alt="">
-                        <p class="text-gray-500 mt-2">
+                <div class="footer-top sm:flex justify-between container
+                    mx-auto">
+                    <div class="left w-full md:w-[20%] mb-6">
+                        <img src="./assets/images/edu_black.webp" alt=""
+                            class="w-[200px] h-[47px]">
+                        <p class="text-gray-500 mt-2 leading-18">
                             Ut enim ad minima veniam, quis nostrum
                             exercitationem ullam corporis suscipit
                             laboriosam, nisi ut aliquid ex ea commodi
                             consequatur
                         </p>
                     </div>
-                    <div class="right ml-auto w-[60%]">
-                        <div class="grid grid-cols-4 gap-4">
+                    <div class="right ml-auto mt-4 w-full md:w-[60%] mt-0">
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                             <div class="col">
                                 <h3 class="font-semibold text-xl">Company</h3>
                                 <ul class="mt-4">
@@ -870,8 +882,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer-middle bg-[#F8FCFF] py-6 mt-10">
-                    <div class="text-center flex justify-center gap-8">
+                <div class="footer-middle bg-[#F8FCFF] py-6 mt-20">
+                    <div class="text-center gap-8 block md:flex justify-center
+                        ">
                         <div class="phone">
                             <i class="fal fa-phone-volume text-[#FFB606]"></i>
                             <a href="tel:800 388 80 90" class="font-medium">800
@@ -892,7 +905,8 @@
                     </div>
                 </div>
                 <div class="footer-bottom container mx-auto">
-                    <div class="flex justify-between items-center py-6">
+                    <div class="inline-block justify-center py-10 md:flex
+                        justify-between items-center">
                         <div class="left">
                             <p class="text-gray-500">© 2022 Eduma. All Rights
                                 Reserved.</p>
@@ -929,7 +943,7 @@
                 </div>
             </div>
         </div>
-        <div class="content-popup">
+        <div class="content-popup fixed right-0 top-[20%] z-20">
             <div class="style-toggle toggle-demo ">
                 <div class="absolute top-1/2 left-1/2 transform
                     -translate-x-1/2
@@ -955,7 +969,9 @@
                 </div>
             </div>
         </div>
-        <button id="buttonTop" class="on-top-button">
+        <button id="buttonTop" class="on-top-button fixed bottom-[20px]
+            right-[20px] z-30 w-[50px] h-[50px] bg-[#fdb03f] rounded-full
+            text-center text-white">
             <i class="fas fa-angle-double-up"></i>
         </button>
     </body>
